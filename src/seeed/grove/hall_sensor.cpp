@@ -5,12 +5,13 @@
 #include "hall_sensor.h"
 
 HallSensor::HallSensor(uint8_t pin)
-    : hallPin(pin), lastState(false) {
+        : hallPin(pin), lastState(false) {
     begin();
 }
 
 void HallSensor::begin() {
-    pinMode(hallPin, INPUT);
+    // ✅ 使用 INPUT_PULLUP 模式，防止引脚悬空
+    pinMode(hallPin, INPUT_PULLUP);
     lastState = isDetected();
 }
 

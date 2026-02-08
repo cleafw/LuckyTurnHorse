@@ -13,9 +13,11 @@
 // ==================== 全局对象集合 ====================
 extern WS2813Ring strip0;
 extern WS2813Ring strip1;
+extern WS2813Ring strip2;
+extern WS2813Ring strip3;
 extern WS2813Ring* strips[STRIP_COUNT];
 
-extern HallSensor hallSensor0;
-extern Relay relay0;
+extern HallSensor hallSensor;
+extern Relay relay;
 
 #endif // WISHINGTREE_GOBJECT_H

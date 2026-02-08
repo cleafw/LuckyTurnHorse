@@ -8,8 +8,10 @@
 #include "global/GData.h"
 #include "global/GObject.h"
 
-void app_Init();    // 初始化
-void app_Task();    // 灯带任务
+
+void app_Init();    // 初始化系统
+
+void app_Task();    // 业务任务
 
 
 #endif //WISHINGTREE_APP_H

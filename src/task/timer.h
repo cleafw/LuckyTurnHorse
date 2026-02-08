@@ -7,15 +7,15 @@
 
 #include <Arduino.h>
 
-// 定时器间隔（毫秒）
-#define TIMER_INTERVAL_MS 1000
+// 注意：定时器间隔由 GData.h 中的 TIMEOUT_MS 定义
 
 // 定义回调函数类型
 typedef void (*TimerCallback)(void);
 
 // 定时器初始化函数
-// 参数: callback - 定时器触发时的回调函数（可选）
-void timer_task_init(bool start = false, TimerCallback callback = NULL);
+// 参数: timeout_ms - 超时时间（毫秒）
+//       callback - 定时器触发时的回调函数
+void timer_task_init(uint32_t timeout_ms, TimerCallback callback);
 
 // 停止定时器
 void timer_stop();
@@ -23,7 +23,7 @@ void timer_stop();
 // 启动定时器
 void timer_start();
 
-// 设置定时器周期（微秒）
-void timer_set_period(uint32_t microseconds);
+// 重启定时器（停止后重新启动）
+void timer_restart();
 
 #endif // TIMER_H

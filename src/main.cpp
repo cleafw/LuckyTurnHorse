@@ -7,10 +7,8 @@
 
 void setup() {
     Serial.begin(115200);
-
-    app_Init();    // 初始化
 }
 
 void loop() {
-    app_Task();     // 业务任务
+    app_Task(); // 灯带任务
 }
