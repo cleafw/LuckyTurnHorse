@@ -23,7 +23,7 @@
 #define STRIP_BRIGHTNESS    250     // 灯带默认亮度 (0-255)
 #define STRIP_COLOR_R       255      // 灯带固定颜色 R
 #define STRIP_COLOR_G       255     // 灯带固定颜色 G
-#define STRIP_COLOR_B       153       // 灯带固定颜色 B
+#define STRIP_COLOR_B       51       // 灯带固定颜色 B
 
 // ==================== 交互模式配置 ====================
 #define MAX_HALL_TRIGGERS   8       // 完全点亮所需的霍尔触发次数
